@@ -10,6 +10,7 @@ Created by Denis Tomskikh.
 
 Download and unzip the project then go to the unpacked project folder and enter 'yarn' to pull up the dependencies
 
+
 ```bash
 $ yarn
 ```
