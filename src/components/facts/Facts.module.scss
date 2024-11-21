@@ -1,0 +1,156 @@
+@import '../../shared/variables.scss';
+
+.factsContainer {
+    margin-top: 56px;
+    margin-left: 78px;
+    position: relative;
+
+    .facts {
+        overflow: hidden;
+        display: flex;
+        gap: 80px;
+        scroll-snap-type: x mandatory;
+
+        .fact {
+            flex-shrink: 0;
+            scroll-snap-align: start;
+
+            .factYear {
+                font-family: 'bebas-nueue';
+                font-size: 25px;
+                color: $years-color;
+                margin-bottom: 15px;
+            }
+            .factText {
+                font-family: 'pt-sans';
+                font-size: 20px;
+            }
+        }
+    }
+
+    .factsButton {
+        position: absolute;
+        width: 40px;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .factsButton:disabled {
+        cursor: default;
+        opacity: 0;
+    }
+
+    .factsButtonLeft {
+        top: 20px;
+        border: none;
+        left: -50px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .factsButtonRight {
+        top: 20px;
+        border: none;
+        right: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .factsButtonImg {
+        width: 7px;
+    }
+}
+
+@media (max-width: $breakpoint_xxl) {
+    .factsContainer {
+        margin-top: 5dvh;
+        margin-left: 0px;
+        position: relative;
+
+        .factsButton {
+            display: none;
+        }
+    }
+}
+@media (max-width: $breakpoint_xl) {
+    .factsContainer {
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint_md) {
+    .factsContainer {
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media (max-height: $breakpoint_md) {
+    .factsContainer {
+        margin-top: 5dvh;
+        margin-left: 0px;
+        position: relative;
+
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .factsButton {
+            display: none;
+        }
+    }
+}
+@media (max-width: $breakpoint_xs) {
+    .factsContainer {
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $breakpoint_xs) {
+    .factsContainer {
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xxs) {
+    .factsContainer {
+        .facts {
+            .fact {
+                .factText {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

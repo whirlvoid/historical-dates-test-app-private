@@ -1,4 +1,5 @@
-export interface IPoints {
+export interface IPointsWithCoordinates {
+    id: number
     num: number
     x: number
     y: number
@@ -9,7 +10,8 @@ interface IYear {
     descr: string
 }
 
-export interface IDate {
+export interface IData {
+    id: number
     num: number
     title: string
     leftYear: number

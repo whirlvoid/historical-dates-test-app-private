@@ -1,0 +1,90 @@
+@import '../../shared/variables.scss';
+
+.bigYears {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    transition: 1.5s ease;
+
+    .bigYear {
+        font-size: 200px;
+    }
+
+    .leftYear {
+        color: $iris-color;
+    }
+
+    .rightYear {
+        color: $fuschia-color;
+    }
+}
+
+@media (max-width: $breakpoint_xxl) {
+    .bigYears {
+        .bigYear {
+            font-size: 150px;
+        }
+        .leftYear {
+            color: $years-color;
+        }
+    }
+}
+@media (max-width: $breakpoint_xl) {
+    .bigYears {
+        .bigYear {
+            font-size: 120px;
+        }
+        .leftYear {
+            color: $years-color;
+        }
+    }
+}
+@media (max-width: $breakpoint_md) {
+    .bigYears {
+        gap: 50px;
+
+        .bigYear {
+            font-size: 100px;
+        }
+    }
+}
+@media (max-height: $breakpoint_md) {
+    .bigYears {
+        gap: 30px;
+
+        .bigYear {
+            font-size: 80px;
+        }
+    }
+}
+@media (max-width: $breakpoint_xs) {
+    .bigYears {
+        gap: 30px;
+
+        .bigYear {
+            font-size: 80px;
+        }
+    }
+}
+
+@media (max-height: $breakpoint_xs) {
+    .bigYears {
+        gap: 20px;
+
+        .bigYear {
+            font-size: 56px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xxs) {
+    .bigYears {
+        gap: 20px;
+
+        .bigYear {
+            font-size: 56px;
+        }
+    }
+}

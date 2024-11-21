@@ -1,7 +1,11 @@
-import { IDate } from './interfaces'
+import { IData } from './shared/interfaces'
 
-export const INITIAL_DATES: IDate[] = [
+// YOU CAN ADD OR REMOVE SOME DATA
+// IT WILL BE WORKING
+
+export const INITIAL_DATA: IData[] = [
     {
+        id: 0,
         num: 1,
         title: 'Период становления Российского государства',
         leftYear: 862,
@@ -23,6 +27,7 @@ export const INITIAL_DATES: IDate[] = [
         ],
     },
     {
+        id: 1,
         num: 2,
         title: 'Эпоха Киевской Руси',
         leftYear: 988,
@@ -47,6 +52,7 @@ export const INITIAL_DATES: IDate[] = [
         ],
     },
     {
+        id: 2,
         num: 3,
         title: 'Монголо-татарское иго',
         leftYear: 1237,
@@ -68,6 +74,7 @@ export const INITIAL_DATES: IDate[] = [
         ],
     },
     {
+        id: 3,
         num: 4,
         title: 'Возвышение Москвы',
         leftYear: 1462,
@@ -95,6 +102,7 @@ export const INITIAL_DATES: IDate[] = [
         ],
     },
     {
+        id: 4,
         num: 5,
         title: 'Эпоха Петра I',
         leftYear: 1700,
@@ -113,6 +121,7 @@ export const INITIAL_DATES: IDate[] = [
         ],
     },
     {
+        id: 5,
         num: 6,
         title: 'Реформы Александра II',
         leftYear: 1861,
