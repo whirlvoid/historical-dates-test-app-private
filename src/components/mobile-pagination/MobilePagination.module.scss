@@ -1,0 +1,35 @@
+@import '../../shared/variables.scss';
+
+.mobilePagination {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mobilePaginationPoints {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        .mobilePaginationPoint {
+            padding: 0;
+            border: none;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $border-2-color;
+        }
+        .mobilePaginationPointActive {
+            background-color: $point-color;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_xxl) {
+    .mobilePagination {
+        display: none;
+    }
+}

@@ -1,0 +1,142 @@
+@import '../../shared/variables.scss';
+
+.swipePeriod {
+    margin-left: 78px;
+    padding-top: 78px;
+
+    .swipePeriodText {
+        font-family: 'pt-sans';
+        font-size: 14px;
+    }
+
+    .swipePeriodButtons {
+        display: flex;
+        gap: 20px;
+
+        .swipePeriodButton {
+            position: relative;
+            z-index: 2;
+            background-color: #0000;
+            border: $border-3-color 1px solid;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: linear 0.2s;
+            cursor: pointer;
+
+            .swipePeriodImg {
+                width: 7px;
+            }
+        }
+
+        .swipePeriodButton:disabled {
+            cursor: default;
+            opacity: 50%;
+            background-color: #0000;
+        }
+
+        .swipePeriodButton:hover {
+            background-color: white;
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xxl) {
+    .swipePeriod {
+        position: absolute;
+        margin-left: 0px;
+        padding-top: 0px;
+        bottom: 5%;
+
+        .swipePeriodButtons {
+            gap: 18px;
+        }
+
+        .swipePeriodButton {
+            height: 45px;
+            width: 45px;
+        }
+    }
+}
+@media (max-width: $breakpoint_xl) {
+    .swipePeriod {
+        .swipePeriodButtons {
+            gap: 16px;
+
+            .swipePeriodButton {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint_md) {
+    .swipePeriod {
+        .swipePeriodButtons {
+            gap: 16px;
+
+            .swipePeriodButton {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+@media (max-height: $breakpoint_md) {
+    .swipePeriod {
+        position: absolute;
+        margin-left: 0px;
+        padding-top: 0px;
+        bottom: 13px;
+
+        .swipePeriodButtons {
+            gap: 12px;
+
+            .swipePeriodButton {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint_xs) {
+    .swipePeriod {
+        .swipePeriodButtons {
+            gap: 12px;
+
+            .swipePeriodButton {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+@media (max-height: $breakpoint_xs) {
+    .swipePeriod {
+        .swipePeriodButtons {
+            gap: 8px;
+
+            .swipePeriodButton {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xxs) {
+    .swipePeriod {
+        .swipePeriodButtons {
+            gap: 8px;
+
+            .swipePeriodButton {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
