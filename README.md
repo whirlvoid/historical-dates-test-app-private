@@ -8,11 +8,16 @@ Created by Denis Tomskikh.
 
 ## Project setup
 
+Download and unzip the project
+Go to the unpacked project folder and enter 'yarn' to pull up the dependencies:
+
 ```bash
 $ yarn
 ```
 
 ## Compile and run the project
+
+After that, enter 'yarn start' and wait for the application to launch on port 3000
 
 ```bash
 # development with watch mode
