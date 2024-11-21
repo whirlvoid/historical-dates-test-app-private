@@ -1,97 +1,122 @@
 @import 'shared/variables.scss';
 
-.container {
-    margin: 0 8.3% 0 16.6%;
-}
-
 .app {
     min-height: 100dvh;
     position: relative;
-}
-.title {
-    font-size: 56px;
-    padding-left: 78px;
-    padding-top: 170px;
-    position: relative;
-    transition: 0.5s ease;
-}
-.title::before {
-    position: absolute;
-    width: 6px;
-    height: 120px;
-    left: 0;
-    top: 185px;
-    background: linear-gradient(to bottom, $iris-color, $fuschia-color);
-    content: '';
-}
-.line {
-    margin-top: 20px;
-    background-color: $border-3-color;
-    height: 1px;
-}
-.lineText {
-    margin-top: 15dvh;
-    font-size: 14px;
+
+    .container {
+        margin: 0 8.3% 0 16.6%;
+    }
+
+    .title {
+        font-size: 56px;
+        padding-left: 78px;
+        padding-top: 170px;
+        position: relative;
+        transition: 0.5s ease;
+    }
+
+    .title::before {
+        position: absolute;
+        width: 6px;
+        height: 120px;
+        left: 0;
+        top: 185px;
+        background: linear-gradient(to bottom, $iris-color, $fuschia-color);
+        content: '';
+    }
+
+    .line {
+        margin-top: 20px;
+        background-color: $border-3-color;
+        height: 1px;
+    }
+
+    .lineText {
+        margin-top: 15dvh;
+        font-size: 14px;
+    }
 }
 
 @media (min-width: $breakpoint_xxl) {
-    .line {
-        display: none;
-    }
-    .lineText {
-        display: none;
+    .app {
+        .line {
+            display: none;
+        }
+
+        .lineText {
+            display: none;
+        }
     }
 }
 @media (max-width: $breakpoint_xxl) {
-    .title {
-        padding-top: 59px;
-        padding-left: 0px;
-        font-size: 56px;
-    }
-    .title::before {
-        display: none;
-    }
-    .container {
-        margin: 0 5% 0 5%;
+    .app {
+        .container {
+            margin: 0 5% 0 5%;
+        }
+
+        .title {
+            padding-top: 59px;
+            padding-left: 0px;
+            font-size: 56px;
+        }
+
+        .title::before {
+            display: none;
+        }
     }
 }
 @media (max-width: $breakpoint_xl) {
-    .title {
-        font-size: 45px;
+    .app {
+        .title {
+            font-size: 45px;
+        }
     }
 }
 @media (max-width: $breakpoint_md) {
-    .title {
-        font-size: 40px;
+    .app {
+        .title {
+            font-size: 40px;
+        }
     }
 }
 @media (max-height: $breakpoint_md) {
-    .title {
-        padding-top: 59px;
-        padding-left: 0px;
-        font-size: 30px;
-    }
-    .title::before {
-        display: none;
-    }
-    .container {
-        margin: 0 5% 0 5%;
+    .app {
+        .title {
+            padding-top: 59px;
+            padding-left: 0px;
+            font-size: 30px;
+        }
+
+        .title::before {
+            display: none;
+        }
+
+        .container {
+            margin: 0 5% 0 5%;
+        }
     }
 }
 @media (max-width: $breakpoint_xs) {
-    .title {
-        font-size: 30px;
+    .app {
+        .title {
+            font-size: 30px;
+        }
     }
 }
 
 @media (max-height: $breakpoint_xs) {
-    .title {
-        font-size: 20px;
+    .app {
+        .title {
+            font-size: 20px;
+        }
     }
 }
 
 @media (max-width: $breakpoint_xxs) {
-    .title {
-        font-size: 20px;
+    .app {
+        .title {
+            font-size: 20px;
+        }
     }
 }
