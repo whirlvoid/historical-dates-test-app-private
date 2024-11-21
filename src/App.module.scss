@@ -6,6 +6,12 @@ $border-2-color: #42567a40;
 $border-3-color: #303e5860;
 $years-color: #3877ee;
 
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_xs: 576px;
+$breakpoint_xxs: 380px;
+
 .container {
     margin: 0 8.3% 0 16.6%;
 }
@@ -114,6 +120,7 @@ $years-color: #3877ee;
         }
     }
 }
+
 .title {
     font-size: 56px;
     padding-left: 78px;
@@ -153,6 +160,7 @@ $years-color: #3877ee;
 }
 .swipePeriodText {
     font-family: 'pt-sans';
+    font-size: 14px;
 }
 .swipePeriodButtons {
     display: flex;
@@ -198,7 +206,6 @@ $years-color: #3877ee;
 }
 .fact {
     flex-shrink: 0;
-    width: 500px;
     scroll-snap-align: start;
 }
 .factYear {
@@ -210,7 +217,6 @@ $years-color: #3877ee;
 .factText {
     font-family: 'pt-sans';
     font-size: 20px;
-    width: 400px;
 }
 
 .factsButton {
@@ -246,4 +252,240 @@ $years-color: #3877ee;
 }
 .factsButtonImg {
     width: 7px;
+}
+
+.line {
+    margin-top: 20px;
+    background-color: $border-3-color;
+    height: 1px;
+}
+.lineText {
+    margin-top: 15dvh;
+    font-size: 14px;
+}
+.mobilePagination {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobilePaginationPoints {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.mobilePaginationPoint {
+    padding: 0;
+    border: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $border-2-color;
+}
+.mobilePaginationPointActive {
+    background-color: $point-color;
+}
+@media (min-width: $breakpoint_xxl) {
+    .line {
+        display: none;
+    }
+    .lineText {
+        display: none;
+    }
+    .mobilePagination {
+        display: none;
+    }
+}
+@media (max-width: $breakpoint_xxl) {
+    .main {
+        display: none;
+    }
+    .title {
+        padding-top: 59px;
+        padding-left: 0px;
+        font-size: 56px;
+    }
+    .title::before {
+        display: none;
+    }
+    .container {
+        margin: 0 5% 0 5%;
+    }
+    .bigYear {
+        font-size: 150px;
+    }
+    .swipePeriod {
+        position: absolute;
+        margin-left: 0px;
+        padding-top: 0px;
+        bottom: 5%;
+    }
+    .factsButton {
+        display: none;
+    }
+    .factsContainer {
+        margin-top: 5dvh;
+        margin-left: 0px;
+        position: relative;
+    }
+    .swipePeriodButtons {
+        gap: 18px;
+    }
+    .swipePeriodButton {
+        height: 45px;
+        width: 45px;
+    }
+}
+@media (max-width: $breakpoint_xl) {
+    .title {
+        font-size: 45px;
+    }
+    .bigYear {
+        font-size: 120px;
+    }
+    .factText {
+        font-size: 18px;
+    }
+    .swipePeriodButtons {
+        gap: 16px;
+    }
+    .swipePeriodButton {
+        height: 35px;
+        width: 35px;
+    }
+}
+@media (max-width: $breakpoint_md) {
+    .title {
+        font-size: 40px;
+    }
+    .bigYears {
+        gap: 50px;
+    }
+    .bigYear {
+        font-size: 100px;
+    }
+    .factText {
+        font-size: 18px;
+    }
+    .swipePeriodButtons {
+        gap: 16px;
+    }
+    .swipePeriodButton {
+        height: 35px;
+        width: 35px;
+    }
+}
+@media (max-height: $breakpoint_md) {
+    .main {
+        display: none;
+    }
+    .title {
+        padding-top: 59px;
+        padding-left: 0px;
+        font-size: 30px;
+    }
+    .title::before {
+        display: none;
+    }
+    .container {
+        margin: 0 5% 0 5%;
+    }
+    .bigYears {
+        gap: 30px;
+    }
+    .bigYear {
+        font-size: 80px;
+    }
+    .swipePeriod {
+        position: absolute;
+        margin-left: 0px;
+        padding-top: 0px;
+        bottom: 13px;
+    }
+    .factsButton {
+        display: none;
+    }
+    .factsContainer {
+        margin-top: 5dvh;
+        margin-left: 0px;
+        position: relative;
+    }
+    .factText {
+        font-size: 16px;
+    }
+    .swipePeriodButtons {
+        gap: 12px;
+    }
+    .swipePeriodButton {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (max-width: $breakpoint_xs) {
+    .title {
+        font-size: 30px;
+    }
+    .bigYears {
+        gap: 30px;
+    }
+    .bigYear {
+        font-size: 80px;
+    }
+    .factText {
+        font-size: 16px;
+    }
+    .swipePeriodButtons {
+        gap: 12px;
+    }
+    .swipePeriodButton {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-height: $breakpoint_xs) {
+    .title {
+        font-size: 20px;
+    }
+    .bigYears {
+        gap: 20px;
+    }
+    .bigYear {
+        font-size: 56px;
+    }
+    .factText {
+        font-size: 14px;
+    }
+    .swipePeriodButtons {
+        gap: 8px;
+    }
+    .swipePeriodButton {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: $breakpoint_xxs) {
+    .title {
+        font-size: 20px;
+    }
+    .bigYears {
+        gap: 20px;
+    }
+    .bigYear {
+        font-size: 56px;
+    }
+    .factText {
+        font-size: 14px;
+    }
+    .swipePeriodButtons {
+        gap: 8px;
+    }
+    .swipePeriodButton {
+        height: 25px;
+        width: 25px;
+    }
 }

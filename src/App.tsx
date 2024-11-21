@@ -43,9 +43,6 @@ function App() {
     const [isEnd, setIsEnd] = useState(false)
 
     const handleSwiperChange = () => {
-        console.log('is beginning: ' + swiperInstance?.isBeginning)
-        console.log('is end: ' + swiperInstance?.isEnd)
-
         if (swiperInstance?.isEnd) {
             setIsEnd(true)
         }
@@ -155,6 +152,10 @@ function App() {
                         </button>
                     </div>
                 </div>
+                <div className={styles.lineText}>
+                    {dates[activePoint - 1].title}
+                </div>
+                <div className={styles.line}></div>
                 <div className={styles.factsContainer}>
                     <div className={styles.facts}>
                         <Swiper
@@ -201,6 +202,17 @@ function App() {
                             alt="right arrow blue"
                         />
                     </button>
+                </div>
+            </div>
+            <div className={styles.mobilePagination}>
+                <div className={styles.mobilePaginationPoints}>
+                    {dates.map((point: IDate) => (
+                        <button
+                            key={point.num}
+                            className={`${styles.mobilePaginationPoint} ${point.num === activePoint ? styles.mobilePaginationPointActive : null}`}
+                            onClick={() => setActivePoint(point.num)}
+                        ></button>
+                    ))}
                 </div>
             </div>
         </div>
