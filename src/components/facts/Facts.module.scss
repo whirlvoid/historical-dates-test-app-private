@@ -121,6 +121,7 @@
 }
 @media (max-width: $breakpoint_xs) {
     .factsContainer {
+        margin-top: 2dvh;
         .facts {
             .fact {
                 .factText {
