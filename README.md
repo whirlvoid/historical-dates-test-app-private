@@ -8,8 +8,7 @@ Created by Denis Tomskikh.
 
 ## Project setup
 
-Download and unzip the project
-Go to the unpacked project folder and enter 'yarn' to pull up the dependencies:
+Download and unzip the project then go to the unpacked project folder and enter 'yarn' to pull up the dependencies:
 
 ```bash
 $ yarn
