@@ -1,13 +1,52 @@
+:root {
+    --bg-color: #f4f5f9;
+    --text-color: #42567a;
+}
+@font-face {
+    font-family: 'pt-sans';
+    src: url(./fonts/PTSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'pt-sans-bold';
+    src: url(./fonts/PTSans-Bold.ttf);
+}
+@font-face {
+    font-family: 'bebas-nueue';
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family:
+        'pt-sans-bold',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }

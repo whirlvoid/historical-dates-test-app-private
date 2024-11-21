@@ -1,0 +1,249 @@
+$iris-color: #5d5fef;
+$fuschia-color: #ef5da8;
+$point-color: #42567a;
+$border-1-color: #42567a20;
+$border-2-color: #42567a40;
+$border-3-color: #303e5860;
+$years-color: #3877ee;
+
+.container {
+    margin: 0 8.3% 0 16.6%;
+}
+
+.app {
+    min-height: 100dvh;
+    position: relative;
+    .bg {
+        display: grid;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+}
+
+.main {
+    border-left: $border-1-color solid 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 44.4% 1fr;
+    position: relative;
+    .child {
+        border-right: $border-1-color solid 1px;
+        border-bottom: $border-1-color solid 1px;
+    }
+    .circle {
+        position: absolute;
+        z-index: 1;
+        width: 534px;
+        height: 534px;
+        height: 534px;
+        border: $border-2-color solid 1px;
+        border-radius: 50%;
+        top: calc(44% - 267px);
+        left: calc(50% - 267px);
+        .circleRelative {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+            transition: 1.5s ease;
+            .point {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                background-color: #0000;
+                border-radius: 50%;
+                cursor: pointer;
+                transform-origin: center;
+                border: solid 1px #0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s ease;
+            }
+            .pointPoint {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                width: 6px;
+                height: 6px;
+                background-color: $point-color;
+                opacity: 1;
+                transition: 0.5s ease;
+            }
+            .pointNum {
+                opacity: 0;
+                transition: 0.5s ease;
+                font-family: 'pt-sans';
+                font-size: 20px;
+            }
+            .point:hover {
+                background-color: var(--bg-color);
+                border: solid 1px $border-3-color;
+            }
+            .point:hover .pointNum {
+                opacity: 1;
+            }
+            .point:hover .pointPoint {
+                opacity: 0;
+                width: 56px;
+                height: 56px;
+                background-color: #0000;
+            }
+            .pointActive {
+                background-color: var(--bg-color);
+                border: solid 1px $border-3-color;
+            }
+            .pointPointActive {
+                opacity: 0;
+                width: 56px;
+                height: 56px;
+                background-color: #0000;
+            }
+            .pointNumActive {
+                opacity: 1;
+            }
+        }
+        .circleText {
+            width: 400px;
+            position: absolute;
+            top: 10px;
+            left: 450px;
+            font-size: 20px;
+        }
+    }
+}
+.title {
+    font-size: 56px;
+    padding-left: 78px;
+    padding-top: 170px;
+    position: relative;
+}
+.title::before {
+    position: absolute;
+    width: 6px;
+    height: 120px;
+    left: 0;
+    top: 185px;
+    background: linear-gradient(to bottom, $iris-color, $fuschia-color);
+    content: '';
+}
+.bigYears {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+.bigYear {
+    font-size: 200px;
+}
+.leftYear {
+    color: $iris-color;
+    transition: 1.5s ease;
+}
+.rightYear {
+    color: $fuschia-color;
+}
+
+.swipePeriod {
+    margin-left: 78px;
+    padding-top: 78px;
+}
+.swipePeriodText {
+    font-family: 'pt-sans';
+}
+.swipePeriodButtons {
+    display: flex;
+    gap: 20px;
+}
+.swipePeriodButton {
+    position: relative;
+    z-index: 2;
+    background-color: #0000;
+    border: $border-3-color 1px solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+.swipePeriodButton:disabled {
+    cursor: default;
+    opacity: 50%;
+    background-color: #0000;
+}
+.swipePeriodButton:hover {
+    background-color: white;
+}
+.swipePeriodImg {
+    width: 7px;
+}
+
+.factsContainer {
+    margin-top: 56px;
+    margin-left: 78px;
+    position: relative;
+}
+
+.facts {
+    overflow: hidden;
+    display: flex;
+    gap: 80px;
+    scroll-snap-type: x mandatory;
+}
+.fact {
+    flex-shrink: 0;
+    width: 500px;
+    scroll-snap-align: start;
+}
+.factYear {
+    font-family: 'bebas-nueue';
+    font-size: 25px;
+    color: $years-color;
+    margin-bottom: 15px;
+}
+.factText {
+    font-family: 'pt-sans';
+    font-size: 20px;
+    width: 400px;
+}
+
+.factsButton {
+    position: absolute;
+    width: 40px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+.factsButton:disabled {
+    cursor: default;
+    opacity: 0;
+}
+.factsButtonLeft {
+    top: 20px;
+    border: none;
+    left: -50px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.factsButtonRight {
+    top: 20px;
+    border: none;
+    right: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.factsButtonImg {
+    width: 7px;
+}
