@@ -28,7 +28,6 @@
             z-index: 1;
             width: 534px;
             height: 534px;
-            height: 534px;
             border: $border-2-color solid 1px;
             border-radius: 50%;
             top: calc(44% - 267px);
@@ -70,7 +69,7 @@
                 .pointNum {
                     opacity: 0;
                     transition: 0.5s ease;
-                    font-family: 'pt-sans';
+                    font-family: 'pt-sans', serif;
                     font-size: 20px;
                 }
 

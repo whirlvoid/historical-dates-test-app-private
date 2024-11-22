@@ -16,13 +16,13 @@
             scroll-snap-align: start;
 
             .factYear {
-                font-family: 'bebas-nueue';
+                font-family: 'bebas-nueue', serif;
                 font-size: 25px;
                 color: $years-color;
                 margin-bottom: 15px;
             }
             .factText {
-                font-family: 'pt-sans';
+                font-family: 'pt-sans', serif;
                 font-size: 20px;
             }
         }
@@ -103,7 +103,7 @@
 @media (max-height: $breakpoint_md) {
     .factsContainer {
         margin-top: 5dvh;
-        margin-left: 0px;
+        margin-left: 0;
         position: relative;
 
         .facts {
