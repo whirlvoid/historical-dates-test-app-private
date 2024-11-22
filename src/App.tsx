@@ -18,14 +18,14 @@ const App: FC = () => {
     const [radius] = useState<number>(534 / 2)
 
     useEffect(() => {
-        const newPoinsWithCoordinates = []
+        const newPointsWithCoordinates = []
         for (let i = 0; i < data.length; i++) {
             const angle = (i / data.length) * 2 * Math.PI
             const x = radius + radius * Math.cos(angle)
             const y = radius + radius * Math.sin(angle)
-            newPoinsWithCoordinates.push({ x, y, num: i + 1, id: i })
+            newPointsWithCoordinates.push({ x, y, num: i + 1, id: i })
         }
-        setPointsWithCoordinates(newPoinsWithCoordinates)
+        setPointsWithCoordinates(newPointsWithCoordinates)
     }, [data])
 
     const swiper = useSwiper()
