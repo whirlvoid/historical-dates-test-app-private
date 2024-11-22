@@ -10,7 +10,7 @@ import { Facts } from './components/facts/Facts'
 import { MobilePagination } from './components/mobile-pagination/MobilePagination'
 
 const App: FC = () => {
-    const [data, setData] = useState<IData[]>(INITIAL_DATA)
+    const [data] = useState<IData[]>(INITIAL_DATA)
     const [pointsWithCoordinates, setPointsWithCoordinates] = useState<
         IPointsWithCoordinates[]
     >([])
@@ -18,7 +18,6 @@ const App: FC = () => {
     const [radius] = useState<number>(534 / 2)
 
     useEffect(() => {
-        setData(INITIAL_DATA)
         const newPoinsWithCoordinates = []
         for (let i = 0; i < data.length; i++) {
             const angle = (i / data.length) * 2 * Math.PI
